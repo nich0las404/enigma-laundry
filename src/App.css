@@ -61,6 +61,7 @@ button{
   font-size: 1.5em;
   margin-bottom: 8px;
 }
+
 .transaction-nav{
   gap: 10px;
   display: flex;
@@ -79,6 +80,7 @@ button{
   color: white;
   border: 1px solid var(--color4);
 }
+
 /* main transaction page */
 .main-transaction-page{
   margin-left: 280px;
@@ -106,6 +108,7 @@ button{
   border: 2px solid var(--color6);
   padding: 0px 20px;
   flex-direction: column;
+  position: relative;
 }
 .header-container{
   display: flex;
@@ -139,6 +142,7 @@ button{
   display: flex;
   flex-direction: column;
   overflow: auto;
+  position: relative;
 }
 .description-container {
   display: flex;
@@ -284,4 +288,61 @@ button{
 .input-form{
   width: 100%;
   padding: 5px 4px;
+}
+.return-home-btn-container{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 12px;
+  margin-right: 14px;
+}
+.return-home-btn{
+  padding: 8px 18px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid var(--color4);
+  color: var(--color4);
+  background: white;
+  letter-spacing: 0.5px;
+  transition: 0.25s ease-out;
+}
+.return-home-btn:hover{
+  background: var(--color4);
+  border: 1px solid white;
+  color: white;
+}
+/* history design */
+/* .customer{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+} */
+.reworked-customer{
+}
+/* nav-bar media query */
+@media (max-width: 800px) {
+  .logo-container{
+    width: 65px;
+    height: 65px;
+  }
+  .logo-container p{
+    margin-top: 9px;
+    font-size: 1.3em;
+    line-height: 22px;
+  }
+  .nav-home-container h3{
+    font-size: 1.36em;
+    margin-bottom: 6px;
+  }
+  .transaction-nav{
+    font-size: 1em;
+  }
+  .nav-bar{
+    width: 220px;
+  }
+  /* main-transaction-page */
+  .main-transaction-page{
+    margin-left: 220px;
+  }
 }
