@@ -319,6 +319,7 @@ button{
   align-items: center;
 } */
 .reworked-customer{
+  display: flex;
 }
 /* nav-bar media query */
 @media (max-width: 800px) {
