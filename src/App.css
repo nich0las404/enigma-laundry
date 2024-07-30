@@ -311,15 +311,43 @@ button{
   border: 1px solid white;
   color: white;
 }
+
 /* history design */
-/* .customer{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
+
+.description-citra, .description-spaces{
+  width: 25%;
+}
+.description-trans{
+  width: 25%;
+  text-align: center;
   align-items: center;
-} */
-.reworked-customer{
+}
+.customer-test{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  padding: 6px 10px;
+}
+.payment-style {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  margin-right: 0px;
+}
+.reworked-customer-container {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 230px; 
+  overflow-y: auto; 
+}
+.package-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+  display: inline-block;
 }
 /* nav-bar media query */
 @media (max-width: 800px) {

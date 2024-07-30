@@ -5,6 +5,7 @@ import { faMoneyCheckDollar } from '@fortawesome/free-solid-svg-icons';
 
 const MainPage = ({ customerName, transactionHistory, handleOpenDialog }) => {
   return (
+    
     <main className='main-transaction-page'>
       <div className='profile-container'>
         <img className='profile' src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png' alt='Profile' />
@@ -30,6 +31,7 @@ const MainPage = ({ customerName, transactionHistory, handleOpenDialog }) => {
         </div>
       </div>
     </main>
+    
   );
 };
 

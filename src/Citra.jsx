@@ -3,12 +3,15 @@ import CitraHistory from "./History/CitraHistory";
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileImport } from "@fortawesome/free-solid-svg-icons";
-function Citra({}){
+import { useTransactions } from "./transactionContext";
+function Citra(){
+    const { transactions } =useTransactions()
     const navigate = useNavigate();
 
     const navigateToHome = () => {
       navigate(`/`);
     };
+
 return(
     <>
         <div className="main-transaction-page">
@@ -19,12 +22,13 @@ return(
                 </div>
                 <div className="main-customer-container">
                     <div className="description-container">
-                    <p className="description">Transaction Code</p>
-                    <p className="description">Laundry Package</p>
-                    <p className="description">Quantity (QTY)</p>
-                    <p className="description">Total Payment</p>
+                    <p className="description-citra">Transaction Code</p>
+                    <p className="description-citra">Laundry Package</p>
+                    <p className="description-citra">Quantity (QTY)</p>
+                    <p className="description-citra">Total Payment</p>
                     </div>
                     <CitraHistory
+                    transactions = {transactions.Citra}
                     />
                 </div>
                 <div className="return-home-btn-container">

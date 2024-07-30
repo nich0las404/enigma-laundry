@@ -15,6 +15,7 @@ function App() {
   const [selectedCustomer, setSelectedCustomer] = useState('');
   const [quantity, setQuantity] = useState(0);
   const [totalPayment, setTotalPayment] = useState(0);
+  const [transactionNumber, setTransactionNumber] = useState(2401)
   let transactionHistory = 0;
   const packagePrices = {
     Standard: 18000,
@@ -30,7 +31,7 @@ function App() {
     'Adriana'
   ];
   const TransactionCode = () => {
-    return `TRO2282401`;
+    return `TTRO228${transactionNumber}`;
   };
   const handleOpenDialog = () => {
     setDialogOpen(true);
@@ -45,8 +46,12 @@ function App() {
   };
   const handleQuantityChange = (event) => {
     const quantity = Number(event.target.value);
-    setQuantity(quantity);
-    calculateTotalPayment(selectedPackage, quantity);
+    if(quantity < 0){
+      setQuantity(0);
+    } else {
+      setQuantity(quantity);
+      calculateTotalPayment(selectedPackage, quantity);
+    }
   };
   const calculateTotalPayment = (selectedPackage, qty) => {
     const pricePerKg = packagePrices[selectedPackage] || 0;
@@ -56,7 +61,9 @@ function App() {
   const handleSelectedCustomer = (event) => {
     setSelectedCustomer(event.target.value);
   };
-
+  const handleAddTransaction = () => {
+    setTransactionNumber(prev => prev + 1)
+  }
   return (
     <Router>
       <div className='body' id="body">
@@ -84,6 +91,7 @@ function App() {
           quantity={quantity}
           handleQuantityChange={handleQuantityChange}
           totalPayment={totalPayment}
+          handleAddTransaction={handleAddTransaction}
         />
       </div>
     </Router>
