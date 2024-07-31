@@ -75,10 +75,12 @@ button{
   transition: 0.2s ease-out;
   border: 1px solid var(--color7);
 }
-.transaction-nav:hover{
+
+.transaction-nav.hover {
   background: var(--color4);
   color: white;
   border: 1px solid var(--color4);
+  transform: translateX(20px);
 }
 
 /* main transaction page */
@@ -320,7 +322,6 @@ button{
 .description-trans{
   width: 25%;
   text-align: center;
-  align-items: center;
 }
 .customer-test{
     display: flex;
@@ -333,7 +334,6 @@ button{
   text-align: center;
   color: green;
   font-weight: bold;
-  margin-right: 0px;
 }
 .reworked-customer-container {
   display: flex;

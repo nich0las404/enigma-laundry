@@ -15,7 +15,8 @@ function App() {
   const [selectedCustomer, setSelectedCustomer] = useState('');
   const [quantity, setQuantity] = useState(0);
   const [totalPayment, setTotalPayment] = useState(0);
-  const [transactionNumber, setTransactionNumber] = useState(2401)
+  const [transactionNumber, setTransactionNumber] = useState(2401);
+  const [isHovered, setIsHovered] = useState(false)
   let transactionHistory = 0;
   const packagePrices = {
     Standard: 18000,
@@ -67,12 +68,14 @@ function App() {
   return (
     <Router>
       <div className='body' id="body">
-        <NavBar />
+        <NavBar isHovered={isHovered}/>
         <Routes>
           <Route path="/" element={<MainPage 
             customerName={customerName} 
             transactionHistory={transactionHistory} 
-            handleOpenDialog={handleOpenDialog} />} />
+            handleOpenDialog={handleOpenDialog}
+            setIsHovered={setIsHovered}
+            />} />
           <Route path="/adrian" element={<Adrian />} />
           <Route path="/adriana" element={<Adriana />} />
           <Route path="/diana" element={<Diana />} />

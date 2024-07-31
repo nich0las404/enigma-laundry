@@ -3,10 +3,14 @@ import CustomerList from './CustomerList';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoneyCheckDollar } from '@fortawesome/free-solid-svg-icons';
 
-const MainPage = ({ customerName, transactionHistory, handleOpenDialog }) => {
+const MainPage = ({ customerName, transactionHistory, handleOpenDialog, setIsHovered }) => {
   return (
-    
-    <main className='main-transaction-page'>
+    <>
+        <main 
+        className='main-transaction-page'
+        onMouseEnter={() => setIsHovered(true)} 
+      onMouseLeave={() => setIsHovered(false)}
+        >
       <div className='profile-container'>
         <img className='profile' src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png' alt='Profile' />
       </div>
@@ -31,6 +35,7 @@ const MainPage = ({ customerName, transactionHistory, handleOpenDialog }) => {
         </div>
       </div>
     </main>
+    </>
     
   );
 };

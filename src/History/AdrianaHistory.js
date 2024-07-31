@@ -15,7 +15,7 @@ function AdrianaHistory({transactions}){
                 transactions.map((transaction, index)=> (
                     <div key={index} className="customer-test">
                         <div className="description-trans">
-                        <p className='customer-code orange'>{transaction.transactionCode}</p>
+                        <p className={`customer-code ${index % 2 === 0? 'orange': 'green'}`}>{transaction.transactionCode}</p>
                         </div>
                         <p className="description-trans">
                         <span
