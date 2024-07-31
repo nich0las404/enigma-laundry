@@ -49,6 +49,9 @@ function App() {
     const quantity = Number(event.target.value);
     if(quantity < 0){
       setQuantity(0);
+    } else if(quantity >= 50) {
+      setQuantity(50);
+      calculateTotalPayment(selectedPackage, quantity);
     } else {
       setQuantity(quantity);
       calculateTotalPayment(selectedPackage, quantity);

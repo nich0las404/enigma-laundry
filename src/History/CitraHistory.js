@@ -14,9 +14,9 @@ function CitraHistory({transactions}){
             {
                 transactions.map((transaction, index)=> (
                     <div key={index} className="customer-test">
-                        <div className={`description-trans customer-code ${index % 2 === 0? 'orange': 'green'}`}>
+                            <div className={` description-trans customer-code ${index % 2 === 0? 'orange': 'green'}`}>
                             {transaction.transactionCode}
-                        </div>
+                            </div>
                         <p className="description-trans">
                             <span
                             className="package-circle"

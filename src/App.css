@@ -349,6 +349,7 @@ button{
   margin-right: 8px;
   display: inline-block;
 }
+
 /* nav-bar media query */
 @media (max-width: 800px) {
   .logo-container{
